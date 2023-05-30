@@ -13,8 +13,8 @@ function Recipe() {
         const detailData = await data.json();
         setDetails(detailData);
     };
-    useEffect(()=>{
-        fetchDetails();
+    useEffect((fetchDetails = fetchDetails)=>{
+         fetchDetails();
     },[params.name]);
 
   return (
