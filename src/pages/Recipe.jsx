@@ -13,9 +13,9 @@ function Recipe() {
         const detailData = await data.json();
         setDetails(detailData);
     };
-    useEffect((fetchDetails = fetchDetails)=>{
+    useEffect(()=>{
          fetchDetails();
-    },[params.name]);
+    },[params.name]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <DetailWrapper>
